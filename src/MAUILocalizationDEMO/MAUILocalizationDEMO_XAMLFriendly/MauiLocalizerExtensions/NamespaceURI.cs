@@ -1,0 +1,1 @@
+﻿[assembly:XmlnsDefinition("http://pijnappel.de/maui/localization", "MAUILocalizerExtensions")]

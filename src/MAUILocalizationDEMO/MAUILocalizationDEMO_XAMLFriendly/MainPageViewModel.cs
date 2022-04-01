@@ -1,24 +1,21 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-using MAUILocalizationDEMO.Services.Localization;
+using MAUILocalizerExtensions;
 
 using System.ComponentModel;
 
-namespace MAUILocalizationDEMO
+namespace MAUILocalizationDEMO_XAMLFriendly
 {
 	public partial class MainPageViewModel : ObservableObject
 	{
-		private ILocalizationService _localizationService;
-		public MainPageViewModel(ILocalizationService localization)
+		public MainPageViewModel()
 		{
-			_localizationService = localization;
-
-			AvailableLanguages = _localizationService.GetAvailableCultures();
-			SelectedLanguage = _localizationService.CurrentAppCulture;
+			AvailableLanguages = Localizer.Default.GetAvailableCultures();
+			SelectedLanguage = Localizer.Default.CurrentAppCulture.Name;
 
 			CounterMessage = String.Format(LocalizationResources.Pages.MainPage_CurrentCount, m_counter);
-			_localizationService.CurrentAppCultureChanged += _localizationService_CurrentAppCultureChanged;
+			Localizer.Default.CurrentAppCultureChanged += _localizationService_CurrentAppCultureChanged;
 		}
 
 		private void _localizationService_CurrentAppCultureChanged(object sender, EventArgs e)
@@ -45,7 +42,7 @@ namespace MAUILocalizationDEMO
 			{
 				case nameof(SelectedLanguage):
 					if(!string.IsNullOrWhiteSpace(SelectedLanguage))
-						_localizationService.SetAndSaveAppCulture(SelectedLanguage);
+						Localizer.Default.SetAppCulture(SelectedLanguage);
 					break;
 			}
 		}

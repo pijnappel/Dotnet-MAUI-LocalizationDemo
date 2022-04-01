@@ -22,14 +22,14 @@ namespace LocalizationResources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Strings_Pages {
+    public class OtherPages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Strings_Pages() {
+        internal OtherPages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace LocalizationResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LocalizationResources.Strings_Pages", typeof(Strings_Pages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LocalizationResources.OtherPages", typeof(OtherPages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,11 @@ namespace LocalizationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click me.
+        ///   Looks up a localized string similar to Use more resx files to create a neatly organized structure for your app.
         /// </summary>
-        public static string MainPage_ClickMe {
+        public static string OtherStrings {
             get {
-                return ResourceManager.GetString("MainPage_ClickMe", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Current count: {0}.
-        /// </summary>
-        public static string MainPage_CurrentCount {
-            get {
-                return ResourceManager.GetString("MainPage_CurrentCount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hello, World!.
-        /// </summary>
-        public static string MainPage_HelloWorld {
-            get {
-                return ResourceManager.GetString("MainPage_HelloWorld", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Welcome to .NET Multi-platform App UI.
-        /// </summary>
-        public static string MainPage_WelcomeToMAUI {
-            get {
-                return ResourceManager.GetString("MainPage_WelcomeToMAUI", resourceCulture);
+                return ResourceManager.GetString("OtherStrings", resourceCulture);
             }
         }
     }

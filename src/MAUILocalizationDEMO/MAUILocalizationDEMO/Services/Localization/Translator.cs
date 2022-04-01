@@ -31,16 +31,16 @@ namespace MAUILocalizationDEMO.Services.Localization
 		}
 
 		// For easier binding, we define the translators for our resx files here (static) 
-		public static Translator General { get; } = new Translator(Strings_General.ResourceManager);
-		public static Translator Pages { get; } = new Translator(Strings_Pages.ResourceManager);
-		public static Translator SomeOtherPages { get; } = new Translator(Strings_SomeOtherPages.ResourceManager);
+		public static Translator General { get; } = new Translator(LocalizationResources.General.ResourceManager);
+		public static Translator Pages { get; } = new Translator(LocalizationResources.Pages.ResourceManager);
+		public static Translator OtherPages { get; } = new Translator(LocalizationResources.OtherPages.ResourceManager);
 	
 
 		public static void InvalidateAll()
 		{
 			General.Invalidate();
 			Pages.Invalidate();
-			SomeOtherPages.Invalidate();
+			OtherPages.Invalidate();
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
